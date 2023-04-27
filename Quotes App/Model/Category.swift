@@ -1,14 +1,14 @@
 //
-//  Quote.swift
+//  Category.swift
 //  Quotes App
 //
-//  Created by Gautham on 18/03/23.
+//  Created by Gautham on 24/03/23.
 //
 
 import Foundation
 import UIKit
 
-class Quote {
+class Category {
   
   var title: UILabel
   
