@@ -12,7 +12,6 @@ class QuoteCell: UITableViewCell {
   @IBOutlet weak var quoteTextView: UITextView! {
     didSet {
       quoteTextView.isScrollEnabled = false
-      quoteTextView.isUserInteractionEnabled = false
     }
   }
   @IBOutlet weak var authorLabel: UILabel! {
@@ -21,8 +20,9 @@ class QuoteCell: UITableViewCell {
     }
   }
   
-  func setQuote(quote: String) {
+  func setQuote(quote: String, author: String?) {
     quoteTextView.text = "\" \(quote) \""
+    authorLabel.text = author!
   }
   
 }

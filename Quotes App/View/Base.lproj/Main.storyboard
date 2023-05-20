@@ -12,7 +12,7 @@
         <!--Category View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CategoryViewController" customModule="Quotes_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CategoryViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-Gh-vVS">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="699"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="70" id="Um5-S1-aVQ" customClass="CategoryCell" customModule="Quotes_App" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="70" id="Um5-S1-aVQ" customClass="CategoryCell" customModule="Quotes" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="390" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Um5-S1-aVQ" id="leh-d8-YoL">
@@ -33,7 +33,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6He-hB-3RW">
                                                             <rect key="frame" x="20" y="11" width="350" height="48"/>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -92,7 +92,7 @@
         <!--Quote View Controller-->
         <scene sceneID="G7b-T1-1mx">
             <objects>
-                <viewController id="wVU-jO-8ie" customClass="QuoteViewController" customModule="Quotes_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wVU-jO-8ie" customClass="QuoteViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rhl-1Y-4zf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,22 +101,25 @@
                                 <rect key="frame" x="0.0" y="143" width="390" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuoteCell" id="kSg-Bd-PAS" customClass="QuoteCell" customModule="Quotes_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="74.333335876464844"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuoteCell" id="kSg-Bd-PAS" customClass="QuoteCell" customModule="Quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="59.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kSg-Bd-PAS" id="A55-am-nBC">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="74.333335876464844"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="59.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Quote" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2c-8C-PK9">
                                                     <rect key="frame" x="20" y="20" width="350" height="0.33333333333333215"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                    </accessibility>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-eU-nD9">
-                                                    <rect key="frame" x="20" y="40.333333333333336" width="350" height="14"/>
+                                                    <rect key="frame" x="20" y="25.333333333333329" width="350" height="14"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -126,7 +129,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="x1P-eU-nD9" secondAttribute="trailing" constant="20" id="0CF-cF-Fuw"/>
                                                 <constraint firstAttribute="bottom" secondItem="x1P-eU-nD9" secondAttribute="bottom" constant="20" id="2ql-w7-z4S"/>
                                                 <constraint firstItem="A2c-8C-PK9" firstAttribute="top" secondItem="A55-am-nBC" secondAttribute="top" constant="20" id="DnG-Hg-vh4"/>
-                                                <constraint firstItem="x1P-eU-nD9" firstAttribute="top" secondItem="A2c-8C-PK9" secondAttribute="bottom" constant="20" id="IGF-wz-5od"/>
+                                                <constraint firstItem="x1P-eU-nD9" firstAttribute="top" secondItem="A2c-8C-PK9" secondAttribute="bottom" constant="5" id="IGF-wz-5od"/>
                                                 <constraint firstAttribute="trailing" secondItem="A2c-8C-PK9" secondAttribute="trailing" constant="20" id="LmM-wA-pY1"/>
                                                 <constraint firstItem="A2c-8C-PK9" firstAttribute="leading" secondItem="A55-am-nBC" secondAttribute="leading" constant="20" id="ZVy-Zu-toX"/>
                                                 <constraint firstItem="x1P-eU-nD9" firstAttribute="leading" secondItem="A55-am-nBC" secondAttribute="leading" constant="20" id="pZd-dH-Lfu"/>
@@ -170,7 +173,7 @@
         <!--New Quote View Controller-->
         <scene sceneID="lSl-QU-Pio">
             <objects>
-                <viewController id="Va5-7M-fT4" customClass="NewQuoteViewController" customModule="Quotes_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Va5-7M-fT4" customClass="NewQuoteViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d5f-4x-INl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,15 +194,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiJ-pr-w2z">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="18.666666666666668"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="7hw-1f-RP4"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="7hw-1f-RP4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="- By" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMq-lU-PA9">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="- By" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMq-lU-PA9">
                                         <rect key="frame" x="80" y="0.0" width="270" height="18.666666666666668"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -225,7 +227,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="authorLabel" destination="SiJ-pr-w2z" id="DPU-18-7Ma"/>
                         <outlet property="authorTextField" destination="kMq-lU-PA9" id="Oi1-tr-M8f"/>
                         <outlet property="quoteTextView" destination="gzN-BZ-oDH" id="icX-di-nfe"/>
                     </connections>
