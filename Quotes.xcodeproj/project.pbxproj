@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13672ED6D3D689F86F50E7BD /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2068B2950176277769674B0 /* Pods_Quotes.framework */; };
 		AC2C149C29C5B37A00FCFA15 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C149B29C5B37A00FCFA15 /* CategoryCell.swift */; };
 		AC2C14A029C5E7B500FCFA15 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C149F29C5E7B500FCFA15 /* AlertPresenter.swift */; };
 		AC31DDF829E21DEE001FCF6F /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31DDF729E21DEE001FCF6F /* QuoteCell.swift */; };
@@ -19,6 +20,9 @@
 		AC61BC7B298A8B7E003F8DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC61BC79298A8B7E003F8DC5 /* LaunchScreen.storyboard */; };
 		AC7B85D529F9CFD70099A9A5 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B85D429F9CFD70099A9A5 /* NewQuoteViewController.swift */; };
 		ACC7A79D29E0C5DA00D493FA /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7A79C29E0C5DA00D493FA /* QuoteViewController.swift */; };
+		ACD320492A76A34400C9AC8F /* NotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD320482A76A34400C9AC8F /* NotionManager.swift */; };
+		ACD3204B2A76A53100C9AC8F /* NotionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3204A2A76A53100C9AC8F /* NotionDatabase.swift */; };
+		ACD3204D2A76A6D500C9AC8F /* NotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3204C2A76A6D500C9AC8F /* NotionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,12 @@
 		AC61BC7C298A8B7E003F8DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7B85D429F9CFD70099A9A5 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		ACC7A79C29E0C5DA00D493FA /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		ACD320482A76A34400C9AC8F /* NotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionManager.swift; sourceTree = "<group>"; };
+		ACD3204A2A76A53100C9AC8F /* NotionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionDatabase.swift; sourceTree = "<group>"; };
+		ACD3204C2A76A6D500C9AC8F /* NotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionModel.swift; sourceTree = "<group>"; };
+		B8CAE615B2AD59FD93258E21 /* Pods-Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.release.xcconfig"; path = "Target Support Files/Pods-Quotes/Pods-Quotes.release.xcconfig"; sourceTree = "<group>"; };
+		C2068B2950176277769674B0 /* Pods_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9742AC0F1832433FC2E30E7 /* Pods-Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotes.debug.xcconfig"; path = "Target Support Files/Pods-Quotes/Pods-Quotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13672ED6D3D689F86F50E7BD /* Pods_Quotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2181A4E7634CCF63C9D916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2068B2950176277769674B0 /* Pods_Quotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4448E0BFCFD57D5B19F203BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9742AC0F1832433FC2E30E7 /* Pods-Quotes.debug.xcconfig */,
+				B8CAE615B2AD59FD93258E21 /* Pods-Quotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AC61BC5F298A8B7B003F8DC5 = {
 			isa = PBXGroup;
 			children = (
 				AC61BC6A298A8B7B003F8DC5 /* Quotes App */,
 				AC61BC69298A8B7B003F8DC5 /* Products */,
+				4448E0BFCFD57D5B19F203BE /* Pods */,
+				1A2181A4E7634CCF63C9D916 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +127,9 @@
 			children = (
 				AC2C149B29C5B37A00FCFA15 /* CategoryCell.swift */,
 				AC31DDF729E21DEE001FCF6F /* QuoteCell.swift */,
+				ACD320482A76A34400C9AC8F /* NotionManager.swift */,
+				ACD3204A2A76A53100C9AC8F /* NotionDatabase.swift */,
+				ACD3204C2A76A6D500C9AC8F /* NotionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC61BC7F298A8B7E003F8DC5 /* Build configuration list for PBXNativeTarget "Quotes" */;
 			buildPhases = (
+				3D120990EA30AC402E1062DD /* [CP] Check Pods Manifest.lock */,
 				AC61BC64298A8B7B003F8DC5 /* Sources */,
 				AC61BC65298A8B7B003F8DC5 /* Frameworks */,
 				AC61BC66298A8B7B003F8DC5 /* Resources */,
+				E87C4B738ED0EC3F2F0ADDCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +218,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D120990EA30AC402E1062DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87C4B738ED0EC3F2F0ADDCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quotes/Pods-Quotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quotes/Pods-Quotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quotes/Pods-Quotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC61BC64298A8B7B003F8DC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -194,8 +271,11 @@
 				AC61BC70298A8B7B003F8DC5 /* CategoryViewController.swift in Sources */,
 				AC31DDF829E21DEE001FCF6F /* QuoteCell.swift in Sources */,
 				AC7B85D529F9CFD70099A9A5 /* NewQuoteViewController.swift in Sources */,
+				ACD320492A76A34400C9AC8F /* NotionManager.swift in Sources */,
 				AC61BC6C298A8B7B003F8DC5 /* AppDelegate.swift in Sources */,
+				ACD3204D2A76A6D500C9AC8F /* NotionModel.swift in Sources */,
 				AC61BC6E298A8B7B003F8DC5 /* SceneDelegate.swift in Sources */,
+				ACD3204B2A76A53100C9AC8F /* NotionDatabase.swift in Sources */,
 				ACC7A79D29E0C5DA00D493FA /* QuoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +418,7 @@
 		};
 		AC61BC80298A8B7E003F8DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9742AC0F1832433FC2E30E7 /* Pods-Quotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,7 +434,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,6 +450,7 @@
 		};
 		AC61BC81298A8B7E003F8DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8CAE615B2AD59FD93258E21 /* Pods-Quotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -384,7 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

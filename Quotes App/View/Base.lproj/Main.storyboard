@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,11 +74,18 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="U8R-AH-FIH">
                         <barButtonItem key="backBarButtonItem" id="6Ak-qu-pel"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rBD-G3-ITa">
-                            <connections>
-                                <action selector="addCategoryButton:" destination="BYZ-38-t0r" id="KLd-Kl-80d"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="rBD-G3-ITa">
+                                <connections>
+                                    <action selector="addCategoryButton:" destination="BYZ-38-t0r" id="KLd-Kl-80d"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="XLa-Qn-lqO">
+                                <connections>
+                                    <action selector="refetchDB:" destination="BYZ-38-t0r" id="NiX-9o-8yO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="pKD-Gh-vVS" id="VAO-BE-r5b"/>

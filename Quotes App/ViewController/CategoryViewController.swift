@@ -10,6 +10,7 @@ import UIKit
 class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDataSource {
   
   var categories = [String]()
+  var notionManager = NotionManager()
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -18,6 +19,7 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
     self.title = "Quotes"
     tableView.delegate = self
     tableView.dataSource = self
+    notionManager.fetchDatabase()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +40,10 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
         self.tableView.reloadData()
       }
     }
+  }
+  
+  @IBAction func refetchDB(_ sender: UIBarButtonItem) {
+    notionManager.fetchDatabase()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

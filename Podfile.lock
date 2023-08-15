@@ -1,0 +1,16 @@
+PODS:
+  - NotionSwift (0.8.0)
+
+DEPENDENCIES:
+  - NotionSwift (= 0.8.0)
+
+SPEC REPOS:
+  trunk:
+    - NotionSwift
+
+SPEC CHECKSUMS:
+  NotionSwift: 1f484d81d2fc1e62e826d429e7dfdc9c2cd63fe1
+
+PODFILE CHECKSUM: 0e7dbba0c7fa5a6c63c0c2178f66f11b518f1b14
+
+COCOAPODS: 1.12.1
