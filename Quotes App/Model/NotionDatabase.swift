@@ -7,11 +7,32 @@
 
 import Foundation
 
-struct NotionDatabase : Decodable {
-  let created_time: String
-  let title: [Title]
+struct NotionDatabase: Decodable {
+  let results: [Results]
 }
 
-struct Title: Decodable {
+struct Results: Decodable {
+  let properties: Properties
+}
+
+struct Properties: Decodable {
+  let Category: NotionCategories
+  let Author: NotionAuthors
+  let Quote: NotionQuotes
+}
+
+struct NotionCategories: Decodable {
+  let rich_text: [RichText]
+}
+
+struct NotionAuthors: Decodable {
+  let rich_text: [RichText]
+}
+
+struct NotionQuotes: Decodable {
+  let title: [RichText]
+}
+
+struct RichText: Decodable {
   let plain_text: String
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13672ED6D3D689F86F50E7BD /* Pods_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2068B2950176277769674B0 /* Pods_Quotes.framework */; };
+		AC22C0E32A9AB18F00D56F9A /* Quotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C0E12A9AB18F00D56F9A /* Quotes+CoreDataClass.swift */; };
+		AC22C0E42A9AB18F00D56F9A /* Quotes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22C0E22A9AB18F00D56F9A /* Quotes+CoreDataProperties.swift */; };
 		AC2C149C29C5B37A00FCFA15 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C149B29C5B37A00FCFA15 /* CategoryCell.swift */; };
 		AC2C14A029C5E7B500FCFA15 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C149F29C5E7B500FCFA15 /* AlertPresenter.swift */; };
 		AC31DDF829E21DEE001FCF6F /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31DDF729E21DEE001FCF6F /* QuoteCell.swift */; };
@@ -15,10 +17,10 @@
 		AC61BC6E298A8B7B003F8DC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61BC6D298A8B7B003F8DC5 /* SceneDelegate.swift */; };
 		AC61BC70298A8B7B003F8DC5 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61BC6F298A8B7B003F8DC5 /* CategoryViewController.swift */; };
 		AC61BC73298A8B7B003F8DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC61BC71298A8B7B003F8DC5 /* Main.storyboard */; };
-		AC61BC76298A8B7C003F8DC5 /* Quotes_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC61BC74298A8B7B003F8DC5 /* Quotes_App.xcdatamodeld */; };
 		AC61BC78298A8B7E003F8DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC61BC77298A8B7E003F8DC5 /* Assets.xcassets */; };
 		AC61BC7B298A8B7E003F8DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC61BC79298A8B7E003F8DC5 /* LaunchScreen.storyboard */; };
 		AC7B85D529F9CFD70099A9A5 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B85D429F9CFD70099A9A5 /* NewQuoteViewController.swift */; };
+		AC9054862A8BD62700349786 /* Quotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC9054842A8BD62700349786 /* Quotes.xcdatamodeld */; };
 		ACC7A79D29E0C5DA00D493FA /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7A79C29E0C5DA00D493FA /* QuoteViewController.swift */; };
 		ACD320492A76A34400C9AC8F /* NotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD320482A76A34400C9AC8F /* NotionManager.swift */; };
 		ACD3204B2A76A53100C9AC8F /* NotionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3204A2A76A53100C9AC8F /* NotionDatabase.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC22C0E12A9AB18F00D56F9A /* Quotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quotes+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		AC22C0E22A9AB18F00D56F9A /* Quotes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quotes+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AC2C149B29C5B37A00FCFA15 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		AC2C149F29C5E7B500FCFA15 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		AC31DDF729E21DEE001FCF6F /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
@@ -34,11 +38,11 @@
 		AC61BC6D298A8B7B003F8DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC61BC6F298A8B7B003F8DC5 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		AC61BC72298A8B7B003F8DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC61BC75298A8B7B003F8DC5 /* Quotes_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quotes_App.xcdatamodel; sourceTree = "<group>"; };
 		AC61BC77298A8B7E003F8DC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC61BC7A298A8B7E003F8DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC61BC7C298A8B7E003F8DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7B85D429F9CFD70099A9A5 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
+		AC9054852A8BD62700349786 /* Quotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quotes.xcdatamodel; sourceTree = "<group>"; };
 		ACC7A79C29E0C5DA00D493FA /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		ACD320482A76A34400C9AC8F /* NotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionManager.swift; sourceTree = "<group>"; };
 		ACD3204A2A76A53100C9AC8F /* NotionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionDatabase.swift; sourceTree = "<group>"; };
@@ -107,7 +111,7 @@
 				AC61BC77298A8B7E003F8DC5 /* Assets.xcassets */,
 				AC61BC79298A8B7E003F8DC5 /* LaunchScreen.storyboard */,
 				AC61BC7C298A8B7E003F8DC5 /* Info.plist */,
-				AC61BC74298A8B7B003F8DC5 /* Quotes_App.xcdatamodeld */,
+				AC9054842A8BD62700349786 /* Quotes.xcdatamodeld */,
 			);
 			path = "Quotes App";
 			sourceTree = "<group>";
@@ -125,6 +129,8 @@
 		ACC7A79329DF74B300D493FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC22C0E12A9AB18F00D56F9A /* Quotes+CoreDataClass.swift */,
+				AC22C0E22A9AB18F00D56F9A /* Quotes+CoreDataProperties.swift */,
 				AC2C149B29C5B37A00FCFA15 /* CategoryCell.swift */,
 				AC31DDF729E21DEE001FCF6F /* QuoteCell.swift */,
 				ACD320482A76A34400C9AC8F /* NotionManager.swift */,
@@ -265,11 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9054862A8BD62700349786 /* Quotes.xcdatamodeld in Sources */,
 				AC2C149C29C5B37A00FCFA15 /* CategoryCell.swift in Sources */,
 				AC2C14A029C5E7B500FCFA15 /* AlertPresenter.swift in Sources */,
-				AC61BC76298A8B7C003F8DC5 /* Quotes_App.xcdatamodeld in Sources */,
 				AC61BC70298A8B7B003F8DC5 /* CategoryViewController.swift in Sources */,
+				AC22C0E32A9AB18F00D56F9A /* Quotes+CoreDataClass.swift in Sources */,
 				AC31DDF829E21DEE001FCF6F /* QuoteCell.swift in Sources */,
+				AC22C0E42A9AB18F00D56F9A /* Quotes+CoreDataProperties.swift in Sources */,
 				AC7B85D529F9CFD70099A9A5 /* NewQuoteViewController.swift in Sources */,
 				ACD320492A76A34400C9AC8F /* NotionManager.swift in Sources */,
 				AC61BC6C298A8B7B003F8DC5 /* AppDelegate.swift in Sources */,
@@ -504,13 +512,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AC61BC74298A8B7B003F8DC5 /* Quotes_App.xcdatamodeld */ = {
+		AC9054842A8BD62700349786 /* Quotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AC61BC75298A8B7B003F8DC5 /* Quotes_App.xcdatamodel */,
+				AC9054852A8BD62700349786 /* Quotes.xcdatamodel */,
 			);
-			currentVersion = AC61BC75298A8B7B003F8DC5 /* Quotes_App.xcdatamodel */;
-			path = Quotes_App.xcdatamodeld;
+			currentVersion = AC9054852A8BD62700349786 /* Quotes.xcdatamodel */;
+			path = Quotes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

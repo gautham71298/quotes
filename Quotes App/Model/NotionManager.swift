@@ -7,6 +7,7 @@
 
 import Foundation
 import NotionSwift
+import CoreData
 
 struct NotionManager {
   let notionAPIUrl = "https://api.notion.com/v1/databases"
@@ -25,9 +26,6 @@ struct NotionManager {
       "Content-Type": "application/json"
     ]
     
-//    let json: [String: Any] = ["filter": "{}"]
-//    let jsonData = try? JSONSerialization.data(withJSONObject: json)
-    
     guard let url = URL(string: urlString) else { return }
     
     var request = URLRequest(url: url)
@@ -41,28 +39,40 @@ struct NotionManager {
         print(err!)
       }
       
-      let outputStr  = String(data: data!, encoding: String.Encoding.utf8) as String?
-      print(outputStr!);
-      
       if let safeData = data {
-        if let database = self.parseJson(databaseData: safeData) {
-          print(database)
-        }
+        self.parseJson(databaseData: safeData)
       }
     }).resume()
   }
   
-  private func parseJson(databaseData: Data) -> NotionModel? {
+  private func parseJson(databaseData: Data) {
     let decoder = JSONDecoder()
-    do {
-      let decodedData = try decoder.decode(NotionDatabase.self, from: databaseData)
-      let created_time = decodedData.created_time
-      let plain_text = decodedData.title[0].plain_text
+    DispatchQueue.main.async {
+      let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
       
-      return NotionModel(created_time: created_time, plain_text: plain_text)
-    } catch {
-      print(error)
-      return nil
+      do {
+        let decodedData = try decoder.decode(NotionDatabase.self, from: databaseData)
+        for result in decodedData.results {
+          let category = result.properties.Category.rich_text[0].plain_text
+          let author = result.properties.Author.rich_text[0].plain_text
+          let quote = result.properties.Quote.title[0].plain_text
+          
+          let entity = NSEntityDescription.entity(forEntityName: "Quotes", in: context)
+          let newQuote = NSManagedObject(entity: entity!, insertInto: context)
+          newQuote.setValue(category, forKey: "category")
+          newQuote.setValue(author, forKey: "author")
+          newQuote.setValue(quote, forKey: "quote")
+          
+          do {
+            try context.save()
+          }
+          catch let error as NSError {
+            print("Saving to core data failed - \(error), \(error.userInfo)")
+          }
+        }
+      } catch {
+        print(error)
+      }
     }
   }
 }

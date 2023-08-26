@@ -8,6 +8,8 @@
 import Foundation
 
 struct NotionModel {
-  let created_time: String
-  let plain_text: String
+  let last_edited_time: String
+  let category: String
+  let author: String
+  let quote: String
 }
