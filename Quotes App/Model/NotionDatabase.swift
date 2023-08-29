@@ -12,6 +12,7 @@ struct NotionDatabase: Decodable {
 }
 
 struct Results: Decodable {
+  let id: UUID
   let properties: Properties
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QuoteViewController: AlertPresenter, UITableViewDelegate, UITableViewDataSource, NewQuoteDelegate {
   
@@ -29,7 +30,10 @@ class QuoteViewController: AlertPresenter, UITableViewDelegate, UITableViewDataS
   private func getData() {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     do {
-      notionQuotes = try context.fetch(Quotes.fetchRequest())
+      let request = Quotes.fetchRequest() as NSFetchRequest
+      let predicate = NSPredicate(format: "category CONTAINS '\(categorySelected)'")
+      request.predicate = predicate
+      notionQuotes = try context.fetch(request)
     }
     catch {
       print("Core data fetch failed.")

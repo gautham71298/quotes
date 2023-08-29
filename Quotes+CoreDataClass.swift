@@ -11,5 +11,5 @@ import CoreData
 
 @objc(Quotes)
 public class Quotes: NSManagedObject {
-
+  
 }

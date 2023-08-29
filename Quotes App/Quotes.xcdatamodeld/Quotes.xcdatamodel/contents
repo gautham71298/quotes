@@ -3,6 +3,7 @@
     <entity name="Quotes" representedClassName="Quotes" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="quote" optional="YES" attributeType="String"/>
     </entity>
 </model>

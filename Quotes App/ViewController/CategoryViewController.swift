@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreData
 
-class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDataSource {
+class CategoryViewController: AlertPresenter {
   
   var categories = [String]()
   var notionManager = NotionManager()
@@ -16,14 +17,11 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Quotes"
+    self.title = "Categories"
     tableView.delegate = self
     tableView.dataSource = self
+    notionManager.delegate = self
     notionManager.fetchDatabase()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    self.categories = UserDefaults.standard.stringArray(forKey: "categories") ?? []
   }
   
   // MARK: - IBAction methods
@@ -43,7 +41,10 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
   }
   
   @IBAction func refetchDB(_ sender: UIBarButtonItem) {
-    notionManager.fetchDatabase()
+    if false {
+      notionManager.fetchDatabase()
+    }
+    tableView.reloadData()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,8 +55,12 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
       tableView.deselectRow(at: indexPath, animated: true)
     }
   }
-  
-  // MARK: - Tableview DataSource, Delegates
+}
+
+
+// MARK: - TableviewDelegates
+
+extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return categories.count
@@ -93,5 +98,26 @@ class CategoryViewController: AlertPresenter, UITableViewDelegate, UITableViewDa
     let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
     return configuration
   }
+}
+
+
+// MARK: - NotionManagerDelegate
+
+extension CategoryViewController: NotionManagerDelegate {
   
+  func didFetchQuotes(_ notionManager: NotionManager) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    do {
+      var unfilteredCategories: [String] = []
+      let quotes = try context.fetch(Quotes.fetchRequest())
+      for item in quotes {
+        unfilteredCategories.append(item.category!)
+      }
+      categories = Array(Set(unfilteredCategories))
+      categories.sort()
+      tableView.reloadData()
+    } catch let error as NSError {
+      print("Fetching from core data failed - \(error), \(error.userInfo)")
+    }
+  }
 }

@@ -11,17 +11,18 @@ import CoreData
 
 
 extension Quotes {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Quotes> {
-        return NSFetchRequest<Quotes>(entityName: "Quotes")
-    }
-
-    @NSManaged public var author: String?
-    @NSManaged public var category: String?
-    @NSManaged public var quote: String?
-
+  
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<Quotes> {
+    return NSFetchRequest<Quotes>(entityName: "Quotes")
+  }
+  
+  @NSManaged public var author: String?
+  @NSManaged public var category: String?
+  @NSManaged public var quote: String?
+  @NSManaged public var id: UUID?
+  
 }
 
 extension Quotes : Identifiable {
-
+  
 }

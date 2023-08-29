@@ -8,7 +8,7 @@
 import Foundation
 
 struct NotionModel {
-  let last_edited_time: String
+  let id: UUID
   let category: String
   let author: String
   let quote: String
